@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 body{
-    background-color: rgb(184, 241, 222);
+    /* background-color: rgb(184, 241, 222); */
+    background-image: linear-gradient(260deg, #4987b1 0%, #c16ecf   100%);
 }
 nav {
   /* border: 2px solid red; */
