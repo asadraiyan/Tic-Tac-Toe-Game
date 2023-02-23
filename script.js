@@ -20,10 +20,10 @@ const checkWin = () => {
     [2, 4, 6],
   ];
   wins.forEach((e) => {
-    // console.log(e)
+    console.log(e)
     if (
       boxtext[e[0]].innerText === boxtext[e[1]].innerText && // boxtext[2] === boxtext[5]
-      boxtext[e[2]].innerText === boxtext[e[1]].innerText && // boxtext[8] === boxtext[5]
+      boxtext[e[1]].innerText === boxtext[e[2]].innerText && // boxtext[8] === boxtext[5]
       boxtext[e[0]].innerText !== "" // boxtext[0] !== ""
     ) {
       document.querySelector(".info").innerText =
@@ -37,6 +37,7 @@ const checkWin = () => {
 };
 // Game Logic
 let boxes = document.getElementsByClassName("box");
+console.log(boxes)
 Array.from(boxes).forEach((element) => {
   let boxtext = element.querySelector(".boxtext");
   element.addEventListener("click", () => {
@@ -46,7 +47,7 @@ Array.from(boxes).forEach((element) => {
       turn = changeTurn();
       audioTurn.play();
       checkWin();
-      if (!gameover) {
+      if (gameover === false) {
         document.getElementsByClassName("info")[0].innerText =
           "Turn for " + turn;
       }
