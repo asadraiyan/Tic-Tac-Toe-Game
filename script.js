@@ -20,7 +20,7 @@ const checkWin = () => {
     [2, 4, 6],
   ];
   wins.forEach((e) => {
-    console.log(e)
+    // console.log(e)
     if (
       boxtext[e[0]].innerText === boxtext[e[1]].innerText && // boxtext[2] === boxtext[5]
       boxtext[e[2]].innerText === boxtext[e[1]].innerText && // boxtext[8] === boxtext[5]
@@ -51,7 +51,7 @@ Array.from(boxes).forEach((element) => {
           "Turn for " + turn;
       }
     }
-    if(drawCount === 9 && gameover === false) {
+    if (drawCount === 9 && gameover === false) {
       document.getElementsByClassName("info")[0].innerText = "Match has been drawn!";
     }
   });
